@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-Simplify administration and classroom organization and create accounts of schools, Assignments, students and professors. <br>
+Simplify administration and classroom organization and create accounts of Universities, Assignments, students and professors. <br>
 With ease, the efficiency of the attendees can be monitored, evaluated, and even commendation can be offered. <br>
 Make record accesses easy, check marks without hassle, and communicate in a stress-free manner.
 </h3>
@@ -11,7 +11,7 @@ Make record accesses easy, check marks without hassle, and communicate in a stre
 
 # About
 
-The school management system is a browser-based application developed using technology like MongoDB, Express.
+The student management system is a browser-based application developed using technology like MongoDB, Express.
 js, React. Js, Node. Js. It is to be used to simplify school administration, proper management of Assignments, as well as efficient communication between students, teachers, and other authorities at school.
 
 ## Features
