@@ -2,8 +2,6 @@ const router = require('express').Router();
 
 const { adminRegister, adminLogIn, getAdminDetail} = require('../controllers/admin-controller.js');
 const { sclassCreate, sclassList, deleteSclass, deleteSclasses, getSclassDetail, getSclassStudents } = require('../controllers/class-controller.js');
-const { complainCreate, complainList } = require('../controllers/complain-controller.js');
-const { noticeCreate, noticeList, deleteNotices, deleteNotice, updateNotice } = require('../controllers/notice-controller.js');
 const {
     studentRegister,
     studentLogIn,
@@ -66,23 +64,6 @@ router.delete("/Teacher/:id", deleteTeacher)
 router.put("/TeacherSubject", updateTeacherSubject)
 
 router.post('/TeacherAttendance/:id', teacherAttendance)
-
-// Notice
-
-router.post('/NoticeCreate', noticeCreate);
-
-router.get('/NoticeList/:id', noticeList);
-
-router.delete("/Notices/:id", deleteNotices)
-router.delete("/Notice/:id", deleteNotice)
-
-router.put("/Notice/:id", updateNotice)
-
-// Complain
-
-router.post('/ComplainCreate', complainCreate);
-
-router.get('/ComplainList/:id', complainList);
 
 // Sclass
 

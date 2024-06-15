@@ -7,7 +7,6 @@ import {
     authError,
     authLogout,
     doneSuccess,
-    getDeleteSuccess,
     getRequest,
     getFailed,
     getError,
@@ -68,22 +67,6 @@ export const getUserDetails = (id, address) => async (dispatch) => {
         dispatch(getError(error));
     }
 }
-
-// export const deleteUser = (id, address) => async (dispatch) => {
-//     dispatch(getRequest());
-
-//     try {
-//         const result = await axios.delete(`${REACT_APP_BASE_URL}/${address}/${id}`);
-//         if (result.data.message) {
-//             dispatch(getFailed(result.data.message));
-//         } else {
-//             dispatch(getDeleteSuccess());
-//         }
-//     } catch (error) {
-//         dispatch(getError(error));
-//     }
-// }
-
 
 export const deleteUser = (id, address) => async (dispatch) => {
     dispatch(getRequest());
