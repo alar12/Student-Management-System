@@ -33,10 +33,6 @@ const StudentHomePage = () => {
     const overallAttendancePercentage = calculateOverallAttendancePercentage(subjectAttendance);
     const overallAbsentPercentage = 100 - overallAttendancePercentage;
 
-    const chartData = [
-        { name: 'Present', value: overallAttendancePercentage },
-        { name: 'Absent', value: overallAbsentPercentage }
-    ];
     return (
         <>
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
@@ -63,20 +59,6 @@ const StudentHomePage = () => {
         </>
     )
 }
-
-const ChartContainer = styled.div`
-  padding: 20px; /* Increased padding for better spacing */
-  display: flex;
-  flex-direction: column;
-  height: 240px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #f5f5f5; /* Added background color */
-  border: 1px solid #ccc; /* Added border for visual separation */
-  border-radius: 8px; /* Added border radius */
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
-`;
 
 const StyledPaper = styled(Paper)`
   padding: 24px; /* Increased padding for better spacing */

@@ -125,12 +125,12 @@ const ViewSubject = () => {
                 <BottomNavigationAction
                   label="Attendance"
                   value="attendance"
-                  icon={selectedSection === 'attendance' ? <TableChartIcon /> : <TableChartOutlinedIcon />}
+                  icon={selectedSection === 'attendance' ? <TableChartIcon /> : <InsertChartIcon />}
                 />
                 <BottomNavigationAction
                   label="Marks"
                   value="marks"
-                  icon={selectedSection === 'marks' ? <InsertChartIcon /> : <InsertChartOutlinedIcon />}
+                  icon={selectedSection === 'marks' ? <InsertChartIcon /> : <InsertChartIcon />}
                 />
               </BottomNavigation>
             </Paper>

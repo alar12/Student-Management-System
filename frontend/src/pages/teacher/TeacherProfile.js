@@ -46,10 +46,10 @@ const ProfileCardContent = styled(CardContent)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px; /* Increased padding for content spacing */
+  padding: 20px; 
 `;
 
 const ProfileText = styled(Typography)`
-  margin: 10px 0; /* Adjusted margin for better spacing */
-  text-align: center; /* Center align text */
+  margin: 10px 0; 
+  text-align: center; 
 `;

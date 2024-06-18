@@ -211,15 +211,15 @@ const StyledLink = styled(Link)`
   margin-top: 9px;
   text-decoration: none;
   color: #7f56da;
-  font-size: 1rem; /* Added font size */
-  display: inline-block; /* Ensures link behaves like an inline element */
-  padding: 8px 16px; /* Added padding for clickable area */
-  border-radius: 4px; /* Added border radius */
-  background-color: #f0f0f0; /* Added background color */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+  font-size: 1rem; 
+  display: inline-block; 
+  padding: 8px 16px; 
+  border-radius: 4px; 
+  background-color: #f0f0f0; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
 
   &:hover {
-    background-color: #7f56da; /* Changed background color on hover */
-    color: #fff; /* Changed text color on hover */
+    background-color: #7f56da; 
+    color: #fff; 
   }
 `;

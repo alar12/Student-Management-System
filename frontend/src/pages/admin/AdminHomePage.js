@@ -66,25 +66,25 @@ const StyledPaper = styled(Paper)`
   padding: 24px;
   display: flex;
   flex-direction: column;
-  height: auto; /* Changed height to auto for dynamic content */
+  height: auto; 
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #ffffff; /* Added background color */
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
-  border-radius: 8px; /* Added border radius */
+  background-color: #ffffff; 
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
 `;
 
 const Title = styled.p`
-  font-size: 1.5rem; /* Increased font size */
-  margin-bottom: 12px; /* Added margin bottom for spacing */
-  color: #333333; /* Changed text color */
+  font-size: 1.5rem; 
+  margin-bottom: 12px; 
+  color: #333333; 
 `;
 
 const Data = styled(CountUp)`
-  font-size: calc(1.5rem + 1vw); /* Adjusted font size calculation */
-  font-weight: bold; /* Added font weight */
-  color: #4caf50; /* Changed text color to green */
+  font-size: calc(1.5rem + 1vw); 
+  font-weight: bold; 
+  color: #4caf50; 
 `;
 
 export default AdminHomePage

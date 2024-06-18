@@ -61,28 +61,28 @@ const TeacherHomePage = () => {
 }
 
 const StyledPaper = styled(Paper)`
-  padding: 20px; /* Increased padding for better spacing */
+  padding: 20px; 
   display: flex;
   flex-direction: column;
-  height: 220px; /* Increased height for better content fit */
-  justify-content: space-around; /* Adjusted to evenly space content */
+  height: 220px; 
+  justify-content: space-around; 
   align-items: center;
   text-align: center;
-  background-color: #ffffff; /* Added background color */
-  border-radius: 8px; /* Added border radius */
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+  background-color: #ffffff; 
+  border-radius: 8px; 
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); 
 `;
 
 const Title = styled.p`
-  font-size: 1.5rem; /* Increased font size for title */
-  margin-bottom: 10px; /* Added margin bottom for spacing */
-  color: #333333; /* Changed text color to a darker shade */
+  font-size: 1.5rem; 
+  margin-bottom: 10px; 
+  color: #333333; 
 `;
 
 const Data = styled(CountUp)`
-  font-size: calc(1.5rem + 1vw); /* Adjusted font size calculation */
-  font-weight: bold; /* Added font weight for emphasis */
-  color: #4caf50; /* Changed text color to green */
+  font-size: calc(1.5rem + 1vw); 
+  font-weight: bold; 
+  color: #4caf50; 
 `;
 
 export default TeacherHomePage
