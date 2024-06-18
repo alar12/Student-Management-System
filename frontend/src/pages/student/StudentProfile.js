@@ -101,6 +101,9 @@ const StudentProfile = () => {
 export default StudentProfile
 
 const StyledPaper = styled(Paper)`
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 20px; /* Increased padding for better spacing */
+  margin-bottom: 20px; /* Added margin bottom for spacing between papers */
+  background-color: #ffffff; /* Added background color */
+  border-radius: 8px; /* Added border radius for rounded corners */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
 `;

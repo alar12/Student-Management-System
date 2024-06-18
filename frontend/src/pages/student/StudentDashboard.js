@@ -95,22 +95,25 @@ const styles = {
                 ? theme.palette.grey[100]
                 : theme.palette.grey[900],
         flexGrow: 1,
-        height: '100vh',
+        minHeight: '100vh', // Adjusted to minHeight for full viewport coverage
         overflow: 'auto',
+        padding: '20px', // Added padding for content spacing
+        boxSizing: 'border-box', // Ensures padding doesn't affect overall size
     },
     toolBarStyled: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        px: [1],
+        paddingX: '20px', // Changed px to paddingX for better naming convention
     },
     drawerStyled: {
-        display: "flex"
+        display: 'flex',
+        flexDirection: 'column', // Ensure items stack vertically
     },
     hideDrawer: {
         display: 'flex',
         '@media (max-width: 600px)': {
-            display: 'none',
+            display: 'none', // Hides drawer on screens narrower than 600px
         },
     },
-}
+};

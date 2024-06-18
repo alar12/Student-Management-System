@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Grid, Box, Typography, Paper, Checkbox, FormControlLabel, TextField, CssBaseline, IconButton, InputAdornment, CircularProgress} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import bgpic from "../../assets/designlogin.jpg"
 import { LightPurpleButton } from '../../components/buttonStyles';
 import { registerUser } from '../../redux/userRelated/userHandle';
 import styled from 'styled-components';
@@ -78,7 +77,7 @@ const AdminRegisterPage = () => {
         <ThemeProvider theme={defaultTheme}>
             <Grid container component="main" sx={{ height: '100vh' }}>
                 <CssBaseline />
-                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                <Grid item xs={12} sm={8} md={12} component={Paper} elevation={6} square>
                     <Box
                         sx={{
                             my: 8,
@@ -194,8 +193,6 @@ const AdminRegisterPage = () => {
                     sm={4}
                     md={7}
                     sx={{
-                        backgroundImage: `url(${bgpic})`,
-                        backgroundRepeat: 'no-repeat',
                         backgroundColor: (t) =>
                             t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
                         backgroundSize: 'cover',
@@ -214,4 +211,15 @@ const StyledLink = styled(Link)`
   margin-top: 9px;
   text-decoration: none;
   color: #7f56da;
+  font-size: 1rem; /* Added font size */
+  display: inline-block; /* Ensures link behaves like an inline element */
+  padding: 8px 16px; /* Added padding for clickable area */
+  border-radius: 4px; /* Added border radius */
+  background-color: #f0f0f0; /* Added background color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+
+  &:hover {
+    background-color: #7f56da; /* Changed background color on hover */
+    color: #fff; /* Changed text color on hover */
+  }
 `;

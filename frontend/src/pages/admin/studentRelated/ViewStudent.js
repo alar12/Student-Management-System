@@ -390,6 +390,12 @@ const styles = {
     attendanceButton: {
         marginLeft: "20px",
         backgroundColor: "#270843",
+        color: "#fff",
+        padding: "10px 20px",
+        borderRadius: "4px",
+        border: "none",
+        cursor: "pointer",
+        transition: "background-color 0.3s ease-in-out",
         "&:hover": {
             backgroundColor: "#3f1068",
         }
@@ -397,8 +403,15 @@ const styles = {
     styledButton: {
         margin: "20px",
         backgroundColor: "#02250b",
+        color: "#fff",
+        padding: "12px 24px",
+        borderRadius: "6px",
+        border: "2px solid #02250b",
+        cursor: "pointer",
+        transition: "background-color 0.3s ease-in-out, border-color 0.3s ease-in-out",
         "&:hover": {
             backgroundColor: "#106312",
+            borderColor: "#106312",
         }
     }
-}
+};

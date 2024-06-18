@@ -5,8 +5,6 @@ import { calculateOverallAttendancePercentage } from '../../components/attendanc
 import { getUserDetails } from '../../redux/userRelated/userHandle';
 import styled from 'styled-components';
 import CountUp from 'react-countup';
-import Subject from "../../assets/subjects.svg";
-import Assignment from "../../assets/assignment.svg";
 import { getSubjectList } from '../../redux/sclassRelated/sclassHandle';
 
 const StudentHomePage = () => {
@@ -45,7 +43,6 @@ const StudentHomePage = () => {
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={3} lg={3}>
                         <StyledPaper>
-                            <img src={Subject} alt="Subjects" />
                             <Title>
                                 Total Subjects
                             </Title>
@@ -54,7 +51,6 @@ const StudentHomePage = () => {
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
                         <StyledPaper>
-                            <img src={Assignment} alt="Assignments" />
                             <Title>
                                 Total Assignments
                             </Title>
@@ -69,34 +65,43 @@ const StudentHomePage = () => {
 }
 
 const ChartContainer = styled.div`
-  padding: 2px;
+  padding: 20px; /* Increased padding for better spacing */
   display: flex;
   flex-direction: column;
   height: 240px;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #f5f5f5; /* Added background color */
+  border: 1px solid #ccc; /* Added border for visual separation */
+  border-radius: 8px; /* Added border radius */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
 `;
 
 const StyledPaper = styled(Paper)`
-  padding: 16px;
+  padding: 24px; /* Increased padding for better spacing */
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: auto; /* Changed height to auto for dynamic content */
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  background-color: #ffffff; /* Added background color */
+  border-radius: 8px; /* Added border radius */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
 `;
 
 const Title = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.5rem; /* Increased font size */
+  margin-bottom: 12px; /* Added margin bottom for spacing */
+  color: #333333; /* Changed text color */
 `;
 
 const Data = styled(CountUp)`
-  font-size: calc(1.3rem + .6vw);
-  color: green;
+  font-size: calc(1.5rem + 1vw); /* Adjusted font size calculation */
+  font-weight: bold; /* Added font weight */
+  color: #4caf50; /* Changed text color to green */
 `;
-
 
 
 export default StudentHomePage

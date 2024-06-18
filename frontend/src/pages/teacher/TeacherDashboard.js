@@ -97,28 +97,31 @@ const TeacherDashboard = () => {
 export default TeacherDashboard
 
 const styles = {
-    boxStyled: {
-        backgroundColor: (theme) =>
-            theme.palette.mode === 'light'
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
-        flexGrow: 1,
-        height: '100vh',
-        overflow: 'auto',
+    container: {
+      backgroundColor: (theme) =>
+        theme.palette.mode === 'light'
+          ? theme.palette.grey[100]
+          : theme.palette.grey[900],
+      flexGrow: 1,
+      minHeight: '100vh',
+      overflow: 'auto',
+      padding: '20px', // Adjust padding for content spacing
+      boxSizing: 'border-box', // Ensure padding doesn't affect overall size
     },
-    toolBarStyled: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        px: [1],
+    toolbar: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+      padding: '0 20px', // Horizontal padding for toolbar items
     },
-    drawerStyled: {
-        display: "flex"
+    drawer: {
+      display: 'flex',
+      flexDirection: 'column', // Stack items vertically in the drawer
     },
-    hideDrawer: {
-        display: 'flex',
-        '@media (max-width: 600px)': {
-            display: 'none',
-        },
+    hideOnMobile: {
+      display: 'flex',
+      '@media (max-width: 600px)': {
+        display: 'none', // Hide on mobile screens narrower than 600px
+      },
     },
-}
+  };

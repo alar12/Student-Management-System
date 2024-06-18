@@ -1,10 +1,8 @@
 import { Container, Grid, Paper } from '@mui/material'
 import CountUp from 'react-countup';
 import styled from 'styled-components';
-import Students from "../../assets/img1.png";
 import Lessons from "../../assets/subjects.svg";
 import Tests from "../../assets/assignment.svg";
-import Time from "../../assets/time.svg";
 import { getClassStudents, getSubjectDetails } from '../../redux/sclassRelated/sclassHandle';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -32,7 +30,6 @@ const TeacherHomePage = () => {
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={3} lg={3}>
                         <StyledPaper>
-                            <img src={Students} alt="Students" />
                             <Title>
                                 Class Students
                             </Title>
@@ -57,14 +54,6 @@ const TeacherHomePage = () => {
                             <Data start={0} end={24} duration={4} />
                         </StyledPaper>
                     </Grid>
-                    <Grid item xs={12} md={3} lg={3}>
-                        <StyledPaper>
-                            <img src={Time} alt="Time" />
-                            <Title>
-                                Total Hours
-                            </Title>
-                            <Data start={0} end={30} duration={4} suffix="hrs"/>                        </StyledPaper>
-                    </Grid>
                 </Grid>
             </Container>
         </>
@@ -72,22 +61,28 @@ const TeacherHomePage = () => {
 }
 
 const StyledPaper = styled(Paper)`
-  padding: 16px;
+  padding: 20px; /* Increased padding for better spacing */
   display: flex;
   flex-direction: column;
-  height: 200px;
-  justify-content: space-between;
+  height: 220px; /* Increased height for better content fit */
+  justify-content: space-around; /* Adjusted to evenly space content */
   align-items: center;
   text-align: center;
+  background-color: #ffffff; /* Added background color */
+  border-radius: 8px; /* Added border radius */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
 `;
 
 const Title = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.5rem; /* Increased font size for title */
+  margin-bottom: 10px; /* Added margin bottom for spacing */
+  color: #333333; /* Changed text color to a darker shade */
 `;
 
 const Data = styled(CountUp)`
-  font-size: calc(1.3rem + .6vw);
-  color: green;
+  font-size: calc(1.5rem + 1vw); /* Adjusted font size calculation */
+  font-weight: bold; /* Added font weight for emphasis */
+  color: #4caf50; /* Changed text color to green */
 `;
 
 export default TeacherHomePage

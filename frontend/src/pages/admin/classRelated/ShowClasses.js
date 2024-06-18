@@ -168,33 +168,35 @@ export default ShowClasses;
 
 const styles = {
   styledPaper: {
-    overflow: 'visible',
-    filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-    mt: 1.5,
+    position: 'relative',
+    padding: '1.5rem',
+    backgroundColor: '#ffffff',
+    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.32)',
+    borderRadius: '8px',
+    marginBottom: '1.5rem',
     '& .MuiAvatar-root': {
-      width: 32,
-      height: 32,
-      ml: -0.5,
-      mr: 1,
+      width: '32px',
+      height: '32px',
+      marginRight: '0.5rem',
     },
     '&:before': {
       content: '""',
-      display: 'block',
       position: 'absolute',
-      top: 0,
-      right: 14,
-      width: 10,
-      height: 10,
-      bgcolor: 'background.paper',
+      top: '50%',
+      right: '-7px',
+      width: '14px',
+      height: '14px',
+      backgroundColor: '#ffffff',
       transform: 'translateY(-50%) rotate(45deg)',
-      zIndex: 0,
+      zIndex: '-1',
     },
   }
-}
+};
 
 const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 1rem;
+  margin-top: 2rem;
 `;

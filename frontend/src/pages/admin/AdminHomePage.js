@@ -1,7 +1,4 @@
 import { Container, Grid, Paper } from '@mui/material'
-import Students from "../../assets/img1.png";
-import Classes from "../../assets/img2.png";
-import Teachers from "../../assets/img3.png";
 import styled from 'styled-components';
 import CountUp from 'react-countup';
 import { useDispatch, useSelector } from 'react-redux';
@@ -36,7 +33,6 @@ const AdminHomePage = () => {
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={3} lg={3}>
                         <StyledPaper>
-                            <img src={Students} alt="Students" />
                             <Title>
                                 Total Students
                             </Title>
@@ -45,7 +41,6 @@ const AdminHomePage = () => {
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
                         <StyledPaper>
-                            <img src={Classes} alt="Classes" />
                             <Title>
                                 Total Classes
                             </Title>
@@ -54,7 +49,6 @@ const AdminHomePage = () => {
                     </Grid>
                     <Grid item xs={12} md={3} lg={3}>
                         <StyledPaper>
-                            <img src={Teachers} alt="Teachers" />
                             <Title>
                                 Total Teachers
                             </Title>
@@ -69,22 +63,28 @@ const AdminHomePage = () => {
 
 
 const StyledPaper = styled(Paper)`
-  padding: 16px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  height: 200px;
-  justify-content: space-between;
+  height: auto; /* Changed height to auto for dynamic content */
+  justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #ffffff; /* Added background color */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
+  border-radius: 8px; /* Added border radius */
 `;
 
 const Title = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.5rem; /* Increased font size */
+  margin-bottom: 12px; /* Added margin bottom for spacing */
+  color: #333333; /* Changed text color */
 `;
 
 const Data = styled(CountUp)`
-  font-size: calc(1.3rem + .6vw);
-  color: green;
+  font-size: calc(1.5rem + 1vw); /* Adjusted font size calculation */
+  font-weight: bold; /* Added font weight */
+  color: #4caf50; /* Changed text color to green */
 `;
 
 export default AdminHomePage

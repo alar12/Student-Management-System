@@ -104,17 +104,52 @@ export default AddClass
 
 const StyledContainer = styled(Box)`
   flex: 1 1 auto;
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
+  margin-top: 1rem; /* Added margin-top */
 `;
 
 const StyledBox = styled(Box)`
   max-width: 550px;
-  padding: 50px 3rem 50px;
-  margin-top: 1rem;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 30px;
+  margin-top: 2rem;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease-in-out;
+  text-align: center;
+
+  &:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+  }
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
 `;

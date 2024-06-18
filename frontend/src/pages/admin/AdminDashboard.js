@@ -145,17 +145,28 @@ const styles = {
                 ? theme.palette.grey[100]
                 : theme.palette.grey[900],
         flexGrow: 1,
-        height: '100vh',
+        minHeight: '100vh', // Changed height to minHeight for better responsiveness
         overflow: 'auto',
+        padding: '20px', // Added padding for content spacing
+        boxSizing: 'border-box', // Ensures padding doesn't affect overall size
     },
     toolBarStyled: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        px: [1],
+        paddingX: '20px', // Changed px to paddingX for better naming convention
+        backgroundColor: (theme) =>
+            theme.palette.mode === 'light'
+                ? theme.palette.primary.main
+                : theme.palette.background.paper,
+        color: (theme) =>
+            theme.palette.mode === 'light'
+                ? theme.palette.primary.contrastText
+                : theme.palette.text.primary,
     },
     drawerStyled: {
-        display: "flex"
+        display: 'flex',
+        flexDirection: 'column', // Ensure items stack vertically
     },
     hideDrawer: {
         display: 'flex',
@@ -163,4 +174,4 @@ const styles = {
             display: 'none',
         },
     },
-}
+};

@@ -1,0 +1,11 @@
+body {
+    background-image: url('https://thumbs.dreamstime.com/z/lms-learning-management-system-hand-pressing-button-technology-screen-288017012.jpg?ct=jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Example font-family */
+  }
+  
