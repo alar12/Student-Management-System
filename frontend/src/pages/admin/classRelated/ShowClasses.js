@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { getAllSclasses } from '../../../redux/sclassRelated/sclassHandle';
 import { BlueButton, GreenButton } from '../../../components/buttonStyles';
 import TableTemplate from '../../../components/TableTemplate';
-
+import { deleteUser } from '../../../redux/userRelated/userHandle';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
@@ -36,10 +36,14 @@ const ShowClasses = () => {
   const [message, setMessage] = useState("");
 
   const deleteHandler = (deleteID, address) => {
-    console.log(deleteID);
-    console.log(address);
-    setMessage("Sorry the delete function has been disabled for now.")
-    setShowPopup(true)
+    // console.log(deleteID);
+    // console.log(address);
+    // setMessage("Sorry the delete function has been disabled for now.")
+    // setShowPopup(true)
+    dispatch(deleteUser(deleteID, address))
+      .then(() => {
+        dispatch(getAllSclasses(adminID, "Sclass"));
+      })
   }
 
   const sclassColumns = [

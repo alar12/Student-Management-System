@@ -16,6 +16,8 @@ import SpeedDialTemplate from "../../../components/SpeedDialTemplate";
 import Popup from "../../../components/Popup";
 import DeleteIcon from "@mui/icons-material/Delete";
 import PostAddIcon from '@mui/icons-material/PostAdd';
+import { deleteUser } from '../../../redux/userRelated/userHandle';
+import { resetSubjects } from "../../../redux/sclassRelated/sclassSlice";
 
 const ClassDetails = () => {
     const params = useParams()
@@ -45,10 +47,16 @@ const ClassDetails = () => {
     const [message, setMessage] = useState("");
 
     const deleteHandler = (deleteID, address) => {
-        console.log(deleteID);
-        console.log(address);
-        setMessage("Sorry the delete function has been disabled for now.")
-        setShowPopup(true)
+        // console.log(deleteID);
+        // console.log(address);
+        // setMessage("Sorry the delete function has been disabled for now.")
+        // setShowPopup(true)
+        dispatch(deleteUser(deleteID, address))
+            .then(() => {
+                dispatch(getClassStudents(classID));
+                dispatch(resetSubjects())
+                dispatch(getSubjectList(classID, "ClassSubjects"))
+            })
     }
 
     const subjectColumns = [

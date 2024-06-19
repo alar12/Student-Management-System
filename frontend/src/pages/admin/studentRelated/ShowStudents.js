@@ -10,6 +10,7 @@ import { BlackButton, BlueButton, GreenButton } from '../../../components/button
 import TableTemplate from '../../../components/TableTemplate';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import SpeedDialTemplate from '../../../components/SpeedDialTemplate';
+import { deleteUser } from '../../../redux/userRelated/userHandle';
 
 import * as React from 'react';
 import Button from '@mui/material/Button';
@@ -42,10 +43,14 @@ const ShowStudents = () => {
     const [message, setMessage] = React.useState("");
 
     const deleteHandler = (deleteID, address) => {
-        console.log(deleteID);
-        console.log(address);
-        setMessage("Sorry the delete function has been disabled for now.")
-        setShowPopup(true)
+        // console.log(deleteID);
+        // console.log(address);
+        // setMessage("Sorry the delete function has been disabled for now.")
+        // setShowPopup(true)
+        dispatch(deleteUser(deleteID, address))
+            .then(() => {
+                dispatch(getAllStudents(currentUser._id));
+            })
     }
 
     const studentColumns = [

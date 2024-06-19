@@ -7,6 +7,7 @@ import {
     TableHead, TablePagination, Button, Box, IconButton,
 } from '@mui/material';
 import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
+import { deleteUser } from '../../../redux/userRelated/userHandle';
 import { StyledTableCell, StyledTableRow } from '../../../components/styles';
 import { BlueButton, GreenButton } from '../../../components/buttonStyles';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
@@ -44,10 +45,13 @@ const ShowTeachers = () => {
     }
 
     const deleteHandler = (deleteID, address) => {
-        console.log(deleteID);
-        console.log(address);
-        setMessage("Sorry the delete function has been disabled for now.")
-        setShowPopup(true)
+        // console.log(deleteID);
+        // console.log(address);
+        // setMessage("Sorry the delete function has been disabled for now.")
+        // setShowPopup(true)
+        dispatch(deleteUser(deleteID, address)).then(() => {
+            dispatch(getAllTeachers(currentUser._id));
+        });
     };
 
     const columns = [
